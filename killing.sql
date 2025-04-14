@@ -1,4 +1,7 @@
-use study_1_2;
+
+use team_1_2;
+
+
 
 # customer 생성
 create table Customer(
@@ -7,7 +10,9 @@ create table Customer(
 	phone varchar(8),
 	why varchar(30)
 );
+
 desc Customer;
+
 #Target
 create table Target(
 	targetid int primary key,
@@ -16,7 +21,11 @@ create table Target(
 	gang varchar(10),
 	price int not null
 );
+
 desc Target;
+
+
+
 
 # Order_kill 생성
 create table Order_Kill(
@@ -28,7 +37,9 @@ create table Order_Kill(
 	foreign key(custid) references Customer(custid),
 	foreign key(targetid) references Target(targetid)
 );
+
 desc Order_Kill;
+
 
 
 insert into Customer values(117, '야스오', '010-1101', '요네에게 누명쓰임요');
