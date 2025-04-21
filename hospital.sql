@@ -92,8 +92,7 @@ from hospital h join appointment a on h.hospital_id=a.hospital_id
 group by h.hospital_id, h.name
 order by cnt asc limit 1;
 #병원별 예약된 고유 환자 수를 출력하시오. (같은 환자가 여러 번 예약했어도 1명으로 집계)
-select h.hospital_id, count(distinct patient_id)
+select h.name, count(distinct a.patient_id)
 from hospital h left join appointment a on h.hospital_id=a.hospital_id
-group by h.hospital_id, h.name
-order by h.hospital_id;
+group by h.name;
 
