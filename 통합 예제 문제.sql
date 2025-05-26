@@ -1,5 +1,5 @@
 use employee;
-
+#
 select * from tDepartment;
 select ENumber, RNumber, EName, StartDate from tEmployee;
 select distinct RNumber from tEmployee;
