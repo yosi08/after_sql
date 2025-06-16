@@ -45,9 +45,9 @@ from tEmployee e
 join tDepartment d on e.DNumber = d.DNumber
 join tRank r on e.RNumber = r.RNumber;
 
-select c.CName, COUNT(o.ONumber) as OrderCount
+select c.CName, COUNT(o.ONumber)
 from tCustomer c
 left join tOrder o on c.CNumber = o.CNumber
-GROUP by c.CName;
+group by c.CName;
 
 
