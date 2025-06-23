@@ -22,7 +22,7 @@ from tProduction P
 join tEmployee E on P.ENumber = E.ENumber
 join tDepartment D on E.DNumber = D.DNumber;
 
-select d.DName, e.EName, p.INumber
+xselect d.DName, e.EName, p.INumber
 from tProduction p
 join tEmployee e on p.ENumber = e.ENumber
 join tDepartment d on e.DNumber = d.DNumber;
